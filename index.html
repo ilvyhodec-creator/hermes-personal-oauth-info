@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes personal</title><link rel="stylesheet" href="style.css">
 <main><h1>Hermes personal</h1><p>A private, self-hosted mail connector for its account owner. This application is not offered to the public.</p>
-<h2>What the connector does</h2><p>It connects the owner's personal assistant to the owner's mail accounts. Google access uses the Gmail API with the <code>gmail.readonly</code> permission. The current release checks connection status and the identity of the connected account. It does not retrieve message content.</p>
-<p>The current assistant interface exposes only connection status and connection checks. Reading or searching messages requires a separate implementation and updated disclosures before it is enabled.</p>
+<h2>What the connector does</h2><p>It connects the owner's personal assistant to the owner's mail accounts. Google access uses the Gmail API with the <code>gmail.readonly</code> permission. The interface provides connection checks, bounded searches, and reading of selected messages from the owner's inbox or sent folder.</p>
+<p>Searches cover an explicitly selected date window of at most 31 days, with pagination and coverage information. Reading returns bounded plain text, headers, and attachment descriptions. It does not automatically download attachments or follow links.</p>
 <h2>Data handling</h2><p>OAuth credentials are kept in a separate restricted service on the owner's server. The assistant does not receive raw credentials. The current connector does not change email flags, send email, or delete email.</p>
-<p>This public information site contains no mailbox data, assistant history, configuration files, or credentials.</p>
+<p>Requested message text may be processed by the model provider powering the owner's personal assistant. The assistant may retain requested results in its private conversation history. This public information site contains no mailbox data, assistant history, configuration files, or credentials.</p>
 <nav><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></nav><p class="note">Information updated 2 November 2026.</p></main></html>
